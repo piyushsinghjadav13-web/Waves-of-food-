@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEFEFE"
+    tools:context=".Ssignupactivity">
+
+    <!-- SCROLL FOR SMALL PHONES -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- LOGO -->
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/food" />
+
+            <!-- APP TITLE -->
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:text="Waves of Food"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#000"/>
+
+            <!-- TAGLINE -->
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Deliver Favorite Food"
+                android:textColor="#8AB05A"
+                android:textSize="16sp"/>
+
+            <!-- SECTION TITLE -->
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Sign Up Here"
+                android:textColor="#8AB05A"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <!-- NAME -->
+            <EditText
+                android:id="@+id/name1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@android:drawable/editbox_background"
+                android:drawableStart="@drawable/outline_account_circle_24"
+                android:hint="  Full Name"
+                android:padding="12dp"/>
+
+            <!-- EMAIL -->
+            <EditText
+                android:id="@+id/editTextTextEmailAddress2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/editbox_background"
+                android:drawableStart="@drawable/outline_mark_email_unread_24"
+                android:hint="  Email Address"
+                android:padding="12dp"/>
+
+            <!-- PASSWORD -->
+            <EditText
+                android:id="@+id/editTextTextPassword2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/editbox_background"
+                android:drawableStart="@drawable/outline_lock_24"
+                android:hint="  Password"
+                android:inputType="textPassword"
+                android:padding="12dp"/>
+
+            <!-- OR -->
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:text="Or"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <!-- Sign up with -->
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Sign Up With"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <!-- GOOGLE -->
+            <LinearLayout
+                android:id="@+id/socialLayoutSignup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/googleSignupBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:backgroundTint="#EDE9E9"
+                    android:text="Google"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="12dp"
+                    app:icon="@drawable/google"
+                    app:iconGravity="start"
+                    app:iconPadding="10dp"
+                    app:iconSize="26dp"
+                    app:iconTint="@null" />
+            </LinearLayout>
+
+            <!-- CREATE ACCOUNT -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/account"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:text="Create Account"
+                android:textColor="@color/white"
+                android:backgroundTint="#8AB05A"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <!-- ALREADY HAVE ACCOUNT -->
+            <TextView
+                android:id="@+id/aleradyhaveaccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:text="Already Have An Account?"
+                android:textColor="#8AB05A"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

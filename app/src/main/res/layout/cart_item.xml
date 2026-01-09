@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">   <!-- Increased padding -->
+
+        <!-- FOOD IMAGE -->
+        <ImageView
+            android:id="@+id/CardImage"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- FOOD NAME -->
+        <TextView
+            android:id="@+id/Cardfoodname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Food Name"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/CardImage"
+            app:layout_constraintTop_toTopOf="@id/CardImage"
+            app:layout_constraintEnd_toStartOf="@id/minusbtn" />
+
+        <!-- PRICE (Rs) -->
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="6dp"
+            android:text="Rs"
+            android:textColor="#FF5722"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/CardImage"
+            app:layout_constraintTop_toBottomOf="@id/Cardfoodname" />
+
+        <!-- PRICE VALUE -->
+        <TextView
+            android:id="@+id/cartitemprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="120"
+            android:textColor="#FF5722"
+            android:textSize="15sp"
+            android:layout_marginStart="4dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/textView15"
+            app:layout_constraintTop_toTopOf="@id/textView15" />
+
+        <!-- MINUS BUTTON -->
+        <ImageButton
+            android:id="@+id/minusbtn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/outline_indeterminate_check_box_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <!-- QUANTITY -->
+        <TextView
+            android:id="@+id/CardItemquantity"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="1"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="@id/minusbtn"
+            app:layout_constraintBottom_toBottomOf="@id/minusbtn"
+            app:layout_constraintEnd_toStartOf="@id/minusbtn" />
+
+        <!-- PLUS BUTTON -->
+        <ImageButton
+            android:id="@+id/plusbtn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/outline_add_box_24"
+            app:layout_constraintTop_toTopOf="@id/minusbtn"
+            app:layout_constraintBottom_toBottomOf="@id/minusbtn"
+            app:layout_constraintEnd_toStartOf="@id/CardItemquantity"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <!-- DELETE BUTTON (Under +/- Row) -->
+        <ImageButton
+            android:id="@+id/deletbtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_delete"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/minusbtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
